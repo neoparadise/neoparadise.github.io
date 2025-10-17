@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Allow the GITHUB_TOKEN to push code
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent Node.js version
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
+
+      - name: Build
+        run: pnpm run generate # Nuxt 3 static site generation command
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public # Nuxt 3 static output directory
+          # The branch to deploy to. For user/organization pages, it's usually 'gh-pages'.
+          # For project pages, it can be 'gh-pages' or 'main' if configured.
+          # Assuming 'gh-pages' for now, can be adjusted if needed.
+          publish_branch: gh-pages
