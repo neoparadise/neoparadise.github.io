@@ -74,7 +74,7 @@ onUnmounted(() => {
         :class="['flex flex-col py-4 text-white relative', isScrolled ? 'sticky top-0 border-b' : '']">
         <div class="flex items-center justify-between w-full">
             <div class="flex items-center gap-4">
-                <NuxtLink to="/" class="flex items-center gap-4 pl-4">
+                <NuxtLink to="/" class="flex items-center gap-2 pl-4">
                     <img src="@/assets/img/icon.png" alt="neoparadise logo" class="w-12 h-12" />
                     <h1 class="text-xl font-belanosima font-bold lg:block">NEOPARADISE</h1>
                 </NuxtLink>
@@ -114,7 +114,7 @@ onUnmounted(() => {
                 <NuxtLink to="/get_involved/donate">
                     <Button class="bg-primary">Donate</Button>
                 </NuxtLink>
-                <Button @click="toggleMobileMenu" class="text-white hover:bg-black/40 bg-transparent p-2">
+                <Button @click="toggleMobileMenu" class="text-white  bg-transparent p-2">
                     <svg v-if="!showMobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -132,9 +132,9 @@ onUnmounted(() => {
             :style="{ borderColor: `rgba(107, 114, 128, 0.2)` }"
             class="lg:hidden w-full bg-transparent z-20 py-2 border-b">
             <div class="px-4">
-                <NuxtLink to="/about_us" class="block py-2 text-sm text-white hover:bg-black/40" @click="showMobileMenu = false">About Us</NuxtLink>
+                <NuxtLink to="/about_us" class="block py-2 text-sm text-white" @click="showMobileMenu = false">About Us</NuxtLink>
                 <div class="relative">
-                    <div @click="showDropdown = !showDropdown" class="w-full text-left justify-start text-white hover:bg-black/40 bg-transparent py-2 text-sm">
+                    <div @click="showDropdown = !showDropdown" class="w-full text-left justify-start text-white bg-transparent py-2 text-sm">
                         Get Involved
                         <svg v-if="showDropdown" class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -146,11 +146,11 @@ onUnmounted(() => {
                         </svg>
                     </div>
                     <div v-if="showDropdown">
-                        <NuxtLink to="/get_involved/donate" class="block ml-2 py-2 text-sm text-white hover:bg-black/40" @click="showMobileMenu = false">Donate Funds</NuxtLink>
-                        <NuxtLink to="/get_involved/volunteer" class="block  ml-2 py-2 text-sm text-white hover:bg-black/40" @click="showMobileMenu = false">Volunteer</NuxtLink>
+                        <NuxtLink to="/get_involved/donate" class="block ml-2 py-2 text-sm text-white " @click="showMobileMenu = false">Donate Funds</NuxtLink>
+                        <NuxtLink to="/get_involved/volunteer" class="block  ml-2 py-2 text-sm text-white 0" @click="showMobileMenu = false">Volunteer</NuxtLink>
                     </div>
                 </div>
-                <NuxtLink to="/contact_us" class="block py-2 text-sm text-white hover:bg-black/40" @click="showMobileMenu = false">Contact Us</NuxtLink>
+                <NuxtLink to="/contact_us" class="block py-2 text-sm text-white " @click="showMobileMenu = false">Contact Us</NuxtLink>
             </div>
         </div>
     </nav>
