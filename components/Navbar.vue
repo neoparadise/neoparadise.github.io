@@ -75,8 +75,8 @@ onUnmounted(() => {
         <div class="flex items-center justify-between w-full">
             <div class="flex items-center gap-4">
                 <NuxtLink to="/" class="flex items-center gap-2 pl-4">
-                    <img src="@/assets/img/icon.png" alt="neoparadise logo" class="w-12 h-12" />
-                    <h1 class="text-xl font-belanosima font-bold lg:block">NEOPARADISE</h1>
+                    <img src="@/assets/img/icon.png" alt="NeoParadise logo" class="w-12 h-12" />
+                    <h1 class="text-xl font-belanosima font-bold lg:block">NeoParadise</h1>
                 </NuxtLink>
             </div>
 

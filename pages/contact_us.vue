@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
     <p class="text-gray-600 mb-8">We'd love to hear from you! Please fill out the form below.</p>
     <form action="https://formsubmit.co/willmeyburgh@gmail.com" method="POST" class="space-y-4">
       <input type="hidden" name="_subject" value="New Contact Form Submission">
-      <input type="hidden" name="_next" value="https://neoparadise.github.io/thanks">
+      <input type="hidden" name="_next" value="https://NeoParadise.github.io/thanks">
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
         <Input id="name" name="name" type="text" placeholder="Your Name" required />
